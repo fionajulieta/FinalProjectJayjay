@@ -28,7 +28,7 @@ Feature: Test Automation for Dummy Api
     And response code will be 200
     And response body match with json schema "JsonSchemaPostUser.json"
 
-    PUT MASIH SALAH
+    #PUT MASIH SALAH
 
   Scenario: test delete user
     Given prepare url for "POST_USER"

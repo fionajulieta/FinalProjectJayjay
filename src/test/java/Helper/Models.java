@@ -49,15 +49,16 @@ public class Models {
         System.out.println(finalEndpoint);
         return request.when().delete(finalEndpoint);
     }
-    public static Response updateUserEmail(String endpoint, String user_id){
+    public static Response updateUserEmail(String user_id){
         setupHeaders();
 
-        JSONObject payload = new JSONObject();
-        String valueEmail = "updateUserEmail@dummyapitest.com";
-        payload.put("email", valueEmail);
-
         String finalPutEndpoint = GET_USER + "/" + user_id;
-        System.out.println("final endpointnya adalah "+finalPutEndpoint);
-        return request.body(payload.toString()).when().put(finalPutEndpoint);
+
+        String valueEmail = "updateUserEmail@dummyapitest.com";
+        bodyObj.put("email", valueEmail);
+
+        System.out.println("final endpointnya adalah " + finalPutEndpoint);
+
+        return request.body(bodyObj.toString()).when().put(finalPutEndpoint);
     }
 }

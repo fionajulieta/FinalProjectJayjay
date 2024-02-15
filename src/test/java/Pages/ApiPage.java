@@ -75,7 +75,7 @@ public class ApiPage {
     }
 
     public void hitApiPutEmailRequest(){
-        res = updateUserEmail(setURL, global_id);
+        res = updateUserEmail(global_id);
         System.out.println(res.getBody().asString());
         //System.out.println("ini url nya " + setURL);
     }
