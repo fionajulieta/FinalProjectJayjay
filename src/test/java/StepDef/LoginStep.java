@@ -29,13 +29,13 @@ public class LoginStep {
         homePage.validateLoginPopUpIsDisplayed();
     }
 
-    @And("user input email {string}")
-    public void userInputEmail(String userEmail) {
+    @And("user input email in login menu {string}")
+    public void userInputEmailInLoginMenu(String userEmail) {
         homePage.userInputEmailToLogin(userEmail);
     }
 
-    @And("user input password {string}")
-    public void userInputPassword(String userPassword) {
+    @And("user input password in login menu {string}")
+    public void userInputPasswordInLoginMenu(String userPassword) {
         homePage.userInputPasswordToLogin(userPassword);
     }
 
@@ -50,8 +50,8 @@ public class LoginStep {
         homePage.usernameIsDisplayedinHomepage();
     }
 
-    @Then("website will displayed error pop-up message {string}")
-    public void websiteWillDisplayedErrorPopUpMessage(String loginPopUpMessage) {
+    @Then("website will displayed pop-up message {string}")
+    public void websiteWillDisplayedPopUpMessage(String loginPopUpMessage) {
         homePage.homepageErrorPopUpMessage(loginPopUpMessage);
     }
 }
