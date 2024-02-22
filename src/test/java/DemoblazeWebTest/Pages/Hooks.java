@@ -3,7 +3,6 @@ package DemoblazeWebTest.Pages;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 
 import static DemoblazeWebTest.Utility.WebUtility.driver;
 import static DemoblazeWebTest.Utility.WebUtility.startDriver;
