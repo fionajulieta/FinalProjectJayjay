@@ -50,8 +50,8 @@ public class LoginStep {
         homePage.usernameIsDisplayedinHomepage();
     }
 
-    @Then("website will displayed pop-up message {string}")
-    public void websiteWillDisplayedPopUpMessage(String homepagePopUpMessage) throws InterruptedException {
+    @Then("validate pop up menu displayed {string}")
+    public void validatePopUpMenuDisplayed(String homepagePopUpMessage) throws InterruptedException {
         homePage.homepagePopUpMessage(homepagePopUpMessage);
     }
 }

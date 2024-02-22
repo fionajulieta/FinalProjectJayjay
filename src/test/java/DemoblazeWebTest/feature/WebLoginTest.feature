@@ -16,7 +16,7 @@ Feature: Log In
     And user input email in login menu "bottle123123@gmail.com"
     And user input password in login menu "testwrongpassword"
     And user click login button
-    Then website will displayed pop-up message "Wrong password."
+    Then validate pop up menu displayed "Wrong password."
 
   Scenario: Login with invalid email and invalid password
     Given user is in homepage
@@ -25,7 +25,7 @@ Feature: Log In
     And user input email in login menu "964732595328@ndhsadjkb.co.dha.dj"
     And user input password in login menu "testwrongpassword"
     And user click login button
-    Then website will displayed pop-up message "User does not exist."
+    Then validate pop up menu displayed "User does not exist."
 
   Scenario: Login with any email and no password entered
     Given user is in homepage
@@ -33,4 +33,4 @@ Feature: Log In
     Then validate login pop-up menu is displayed
     And user input email in login menu "964732595328@ndhsadjkb.co.dha.dj"
     And user click login button
-    Then website will displayed pop-up message "Please fill out Username and Password."
+    Then validate pop up menu displayed "Please fill out Username and Password."
