@@ -1,6 +1,6 @@
-package StepDef;
+package DummyAPITest.StepDef;
 
-import Pages.ApiPage;
+import DummyAPITest.Pages.ApiPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

@@ -1,6 +1,6 @@
-package StepDef;
+package DemoblazeWebTest.StepDef;
 
-import Pages.HomePage;
+import DemoblazeWebTest.Pages.HomePage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -51,7 +51,7 @@ public class LoginStep {
     }
 
     @Then("website will displayed pop-up message {string}")
-    public void websiteWillDisplayedPopUpMessage(String loginPopUpMessage) {
-        homePage.homepageErrorPopUpMessage(loginPopUpMessage);
+    public void websiteWillDisplayedPopUpMessage(String homepagePopUpMessage) throws InterruptedException {
+        homePage.homepagePopUpMessage(homepagePopUpMessage);
     }
 }

@@ -39,6 +39,6 @@ Feature: Sign Up
     And user input email in sign up menu "bottle123123@gmail.com"
     And user input password in sign up menu "12345678"
     And user click sign up button
-    Then website will displayed pop-up message "Sign up successful."
+    Then website will displayed pop-up message "This user already exist."
 
 

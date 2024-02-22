@@ -26,3 +26,11 @@ Feature: Log In
     And user input password in login menu "testwrongpassword"
     And user click login button
     Then website will displayed pop-up message "User does not exist."
+
+  Scenario: Login with any email and no password entered
+    Given user is in homepage
+    When user click login menu
+    Then validate login pop-up menu is displayed
+    And user input email in login menu "964732595328@ndhsadjkb.co.dha.dj"
+    And user click login button
+    Then website will displayed pop-up message "Please fill out Username and Password."

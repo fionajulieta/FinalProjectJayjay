@@ -1,15 +1,14 @@
-package Pages;
+package DummyAPITest.Pages;
 
-import Helper.Endpoint;
+import DummyAPITest.Helper.Endpoint;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.json.JSONObject;
 
 import java.io.File;
 import java.util.Objects;
 
-import static Helper.Models.*;
+import static DummyAPITest.Helper.Models.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ApiPage {

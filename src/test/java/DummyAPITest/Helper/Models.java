@@ -1,4 +1,4 @@
-package Helper;
+package DummyAPITest.Helper;
 
 import com.github.javafaker.Faker;
 import io.restassured.RestAssured;
@@ -6,10 +6,6 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.json.JSONObject;
-
-import static Helper.Endpoint.*;
-import static Helper.Utility.generateRandomPictureLink;
-import static Helper.Utility.shuffleTitle;
 
 public class Models {
     private static RequestSpecification request;
@@ -31,8 +27,8 @@ public class Models {
         String valueFirstName = faker.name().firstName();
         String valueLastName = faker.name().lastName();
         String valueEmail = valueFirstName + "." + valueLastName + "@dummyapitest.com";
-        String valueTitle = shuffleTitle();
-        String valuePicture = generateRandomPictureLink();
+        String valueTitle = Utility.shuffleTitle();
+        String valuePicture = Utility.generateRandomPictureLink();
         bodyObj.put("firstName", valueFirstName);
         bodyObj.put("lastName", valueLastName);
         bodyObj.put("email", valueEmail);
@@ -45,14 +41,14 @@ public class Models {
     }
     public static Response deleteUser(String endpoint, String user_id){
         setupHeaders();
-        String finalEndpoint = GET_USER + "/" + user_id;
+        String finalEndpoint = Endpoint.GET_USER + "/" + user_id;
         System.out.println(finalEndpoint);
         return request.when().delete(finalEndpoint);
     }
     public static Response updateUserEmail(String user_id){
         setupHeaders();
 
-        String finalPutEndpoint = GET_USER + "/" + user_id;
+        String finalPutEndpoint = Endpoint.GET_USER + "/" + user_id;
 
         String valueEmail = "updateUserEmail@dummyapitest.com";
         bodyObj.put("email", valueEmail);
