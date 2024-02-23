@@ -36,6 +36,6 @@ Feature: Add to cart
     And user click add to cart button
     Then validate pop up menu displayed "Product Added"
     And validate item is added in cart menu
-    When user delete an item from cart
-    Then item will disappeared from cart item list
+    When user delete item 1 from cart
+    Then item 1 will disappeared from cart item list
 
