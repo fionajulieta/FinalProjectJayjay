@@ -1,17 +1,17 @@
-package DemoblazeWebTest.Pages;
+package Pages;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 
-import static DemoblazeWebTest.Utility.WebUtility.driver;
-import static DemoblazeWebTest.Utility.WebUtility.startDriver;
+import static Helper.WebUtility.driver;
+import static Helper.WebUtility.startDriver;
 
 
 public class Hooks {
 
-    @Before
-    public void beforeTest() {
+    @BeforeAll
+    public static void beforeTest() {
         System.out.println("Start of scenario");
         startDriver();
     }
@@ -20,8 +20,8 @@ public class Hooks {
         Thread.sleep(2000);
     }
 
-    @After
-    public void afterTest() throws InterruptedException {
+    @AfterAll
+    public static void afterTest() throws InterruptedException {
         System.out.println("End of scenario");
         Thread.sleep(2000);
         driver.close();

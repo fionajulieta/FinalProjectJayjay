@@ -1,10 +1,9 @@
-package DemoblazeWebTest.Pages;
+package Pages;
 
 import com.github.javafaker.Faker;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 
-import static DemoblazeWebTest.Utility.WebUtility.driver;
+import static Helper.WebUtility.driver;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class HomePage {
@@ -23,6 +22,8 @@ public class HomePage {
     By loginButtoninPopUp = By.cssSelector("#logInModal > div > div > div.modal-footer > button.btn.btn-primary");
     By signUpButtoninPopUp = By.cssSelector("#signInModal > div > div > div.modal-footer > button.btn.btn-primary");
     By welcomeUserInHomepage = By.id("nameofuser");
+    By firstPhoneProduct = By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/div/h4/a");
+    By itemAddToCartButton = By.className("btn btn-success btn-lg");
 
 
     public void userGoToHomePage(){
@@ -70,5 +71,12 @@ public class HomePage {
         Thread.sleep(5000);
         assertEquals(homepagePopUpMessage,driver.switchTo().alert().getText());
         driver.switchTo().alert().accept();
+    }
+
+    public void phoneProduct(){
+        driver.findElement(firstPhoneProduct).click();
+    }
+    public void addItemToCart(){
+        driver.findElement(itemAddToCartButton).click();
     }
 }

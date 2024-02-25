@@ -1,6 +1,6 @@
-package DemoblazeWebTest.StepDef;
+package StepDef;
 
-import DemoblazeWebTest.Pages.HomePage;
+import Pages.HomePage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

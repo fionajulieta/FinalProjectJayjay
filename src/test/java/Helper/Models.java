@@ -1,4 +1,4 @@
-package DummyAPITest.Helper;
+package Helper;
 
 import com.github.javafaker.Faker;
 import io.restassured.RestAssured;

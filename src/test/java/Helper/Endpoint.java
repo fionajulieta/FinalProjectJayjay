@@ -1,4 +1,4 @@
-package DummyAPITest.Helper;
+package Helper;
 
 public class Endpoint {
     public static final String baseURL = "https://dummyapi.io/data/v1/";

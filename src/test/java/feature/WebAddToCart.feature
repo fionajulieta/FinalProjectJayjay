@@ -5,7 +5,7 @@ Feature: Add to cart
     And user input email in login menu "bottle123123@gmail.com"
     And user input password in login menu "12345678"
     And user click login button
-    When user click item 1 in homepage
+    When user click first item in homepage
     And user click add to cart button
     Then validate pop up menu displayed "Product Added"
     And validate item is added in cart menu
@@ -15,10 +15,10 @@ Feature: Add to cart
     And user input email in login menu "bottle123123@gmail.com"
     And user input password in login menu "12345678"
     And user click login button
-    When user click item 1 in homepage
+    When user click first item in homepage
     And user click add to cart button
     Then validate pop up menu displayed "Product Added"
-    When user click item 2 in homepage
+    When user click second item in homepage
     And user click add to cart button
     Then validate pop up menu displayed "Product Added"
     And validate item is added in cart menu
@@ -29,10 +29,10 @@ Feature: Add to cart
     And user input email in login menu "bottle123123@gmail.com"
     And user input password in login menu "12345678"
     And user click login button
-    When user click item 1 in homepage
+    When user click first item in homepage
     And user click add to cart button
     Then validate pop up menu displayed "Product Added"
-    When user click item 2 in homepage
+    When user click second item in homepage
     And user click add to cart button
     Then validate pop up menu displayed "Product Added"
     And validate item is added in cart menu
