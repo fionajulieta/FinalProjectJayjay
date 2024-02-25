@@ -3,7 +3,7 @@ package Pages;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 
-import static Helper.WebUtility.driver;
+import static Helper.Utility.driver;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class HomePage {
@@ -23,7 +23,7 @@ public class HomePage {
     By signUpButtoninPopUp = By.cssSelector("#signInModal > div > div > div.modal-footer > button.btn.btn-primary");
     By welcomeUserInHomepage = By.id("nameofuser");
     By firstPhoneProduct = By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/div/h4/a");
-    By itemAddToCartButton = By.className("btn btn-success btn-lg");
+    By itemAddToCartButton = By.name("btn btn-success btn-lg");
 
 
     public void userGoToHomePage(){

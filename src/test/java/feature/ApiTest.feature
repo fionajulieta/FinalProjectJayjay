@@ -1,17 +1,20 @@
 Feature: Test Automation for Dummy Api
 
+  @api
   Scenario: test get all user
     Given prepare url for "GET_USER"
     When hit api get request
     Then response code will be 200
     And response body match with json schema "JsonSchemaGetAllUser.json"
 
+  @api
   Scenario: test get a specific user
     Given prepare url for "GET_USER"
     When hit api get request for a specific id "60d0fe4f5311236168a109cc"
     Then response code will be 200
     And response body match with json schema "JsonSchemaGetSpecificUser.json"
 
+  @api
   Scenario: test post user
     Given prepare url for "POST_USER"
     When hit api post request
@@ -19,6 +22,7 @@ Feature: Test Automation for Dummy Api
     And validate create response body
     And response body match with json schema "JsonSchemaPostUser.json"
 
+  @api
   Scenario: test update user (user input incorrect email)
     Given prepare url for "POST_USER"
     When hit api post request
@@ -30,6 +34,7 @@ Feature: Test Automation for Dummy Api
 
     #PUT MASIH SALAH, masi belum bisa update email
 
+  @api
   Scenario: test delete user
     Given prepare url for "POST_USER"
     When hit api post request

@@ -6,11 +6,18 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import static Helper.Utility.driver;
+
 public class LoginStep {
     HomePage homePage;
 
     public LoginStep(){
         this.homePage = new HomePage();
+    }
+
+    @Given("user is in homepages")
+    public void user_is_in_homepages() {
+        driver.get("https://pintu.co.id");
     }
 
     @Given("user is in homepage")
