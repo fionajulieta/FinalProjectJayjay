@@ -15,11 +15,6 @@ public class LoginStep {
         this.homePage = new HomePage();
     }
 
-    @Given("user is in homepages")
-    public void user_is_in_homepages() {
-        driver.get("https://pintu.co.id");
-    }
-
     @Given("user is in homepage")
     public void user_is_in_homepage() {
         homePage.userGoToHomePage();
@@ -48,7 +43,6 @@ public class LoginStep {
     @And("user click login button")
     public void userClickLoginButton() throws InterruptedException {
         homePage.userClickLoginButton();
-        Thread.sleep(5000);
     }
 
     @Then("user will stayed in homepage with username displayed in menu")

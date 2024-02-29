@@ -1,41 +1,50 @@
 Feature: Add to cart
 
-  Scenario: Add 1 item to cart
+  @web
+  Scenario: Add one item to cart
     Given user is in homepage
-    And user input email in login menu "bottle123123@gmail.com"
-    And user input password in login menu "12345678"
+    And user click login menu
+    And user input email in login menu "cartscenarioone@fiona.jay"
+    And user input password in login menu "4231"
     And user click login button
     When user click first item in homepage
     And user click add to cart button
-    Then validate pop up menu displayed "Product Added"
-    And validate item is added in cart menu
+    Then validate pop up menu displayed "Product added."
+    When user click cart menu
+    Then validate item is added in cart menu
 
+  @web
   Scenario: Add multiple items to cart
     Given user is in homepage
-    And user input email in login menu "bottle123123@gmail.com"
-    And user input password in login menu "12345678"
+    And user click login menu
+    And user input email in login menu "cartscenariotwo@fiona.jay"
+    And user input password in login menu "4231"
     And user click login button
     When user click first item in homepage
     And user click add to cart button
-    Then validate pop up menu displayed "Product Added"
+    Then validate pop up menu displayed "Product added."
+    And user go back to homepage
     When user click second item in homepage
     And user click add to cart button
-    Then validate pop up menu displayed "Product Added"
-    And validate item is added in cart menu
+    Then validate pop up menu displayed "Product added."
+    When user click cart menu
+    Then validate both items were added in cart menu
 
-
+  @web
   Scenario: Add multiple items to cart then delete 1 item
     Given user is in homepage
-    And user input email in login menu "bottle123123@gmail.com"
-    And user input password in login menu "12345678"
+    And user click login menu
+    And user input email in login menu "cartscenariothree@fiona.jay"
+    And user input password in login menu "4231"
     And user click login button
     When user click first item in homepage
     And user click add to cart button
-    Then validate pop up menu displayed "Product Added"
+    Then validate pop up menu displayed "Product added."
+    And user go back to homepage
     When user click second item in homepage
     And user click add to cart button
-    Then validate pop up menu displayed "Product Added"
-    And validate item is added in cart menu
-    When user delete item 1 from cart
-    Then item 1 will disappeared from cart item list
-
+    Then validate pop up menu displayed "Product added."
+    When user click cart menu
+    Then validate both items were added in cart menu
+    When user delete one item from cart
+    Then deleted item will disappeared from cart item list

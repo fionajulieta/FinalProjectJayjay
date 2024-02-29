@@ -1,10 +1,5 @@
 Feature: Log In
 
-
-  @web
-  Scenario: TEST DEBUG
-    Given user is in homepages
-
   @web
   Scenario: Login with valid email and valid password
     Given user is in homepage

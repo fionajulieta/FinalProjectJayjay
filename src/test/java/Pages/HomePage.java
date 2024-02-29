@@ -22,8 +22,11 @@ public class HomePage {
     By loginButtoninPopUp = By.cssSelector("#logInModal > div > div > div.modal-footer > button.btn.btn-primary");
     By signUpButtoninPopUp = By.cssSelector("#signInModal > div > div > div.modal-footer > button.btn.btn-primary");
     By welcomeUserInHomepage = By.id("nameofuser");
-    By firstPhoneProduct = By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/div/h4/a");
-    By itemAddToCartButton = By.name("btn btn-success btn-lg");
+    By firstProduct = By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/div/h4/a");
+    By itemAddToCartButton = By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/a");
+    By homepageCartMenu = By.id("cartur");
+    By secondProduct = By.xpath("//*[@id=\"tbodyid\"]/div[9]/div/div/h4/a");
+    By homePageMenu = By.xpath("//*[@id=\"navbarExample\"]/ul/li[1]/a");
 
 
     public void userGoToHomePage(){
@@ -57,8 +60,9 @@ public class HomePage {
     public void userInputPasswordToSignUp(String defaultPassword){
         driver.findElement(signUpUserPassword).sendKeys(defaultPassword);
     }
-    public void userClickLoginButton(){
+    public void userClickLoginButton() throws InterruptedException {
         driver.findElement(loginButtoninPopUp).click();
+        Thread.sleep(5000);
     }
     public void userClickSignUpButton(){
         driver.findElement(signUpButtoninPopUp).click();
@@ -71,12 +75,25 @@ public class HomePage {
         Thread.sleep(5000);
         assertEquals(homepagePopUpMessage,driver.switchTo().alert().getText());
         driver.switchTo().alert().accept();
+        Thread.sleep(2000);
     }
 
     public void phoneProduct(){
-        driver.findElement(firstPhoneProduct).click();
+        driver.findElement(firstProduct).click();
     }
     public void addItemToCart(){
         driver.findElement(itemAddToCartButton).click();
     }
+    public void clickCartMenu() throws InterruptedException {
+        driver.findElement(homepageCartMenu).click();
+        Thread.sleep(2000);
+    }
+    public void addMonitorItemToCart(){
+        driver.findElement(secondProduct).click();
+    }
+    public void goToHomePageMenu() throws InterruptedException {
+        driver.findElement(homePageMenu).click();
+        Thread.sleep(5000);
+    }
+
 }
