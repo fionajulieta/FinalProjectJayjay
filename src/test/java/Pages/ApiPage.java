@@ -29,18 +29,15 @@ public class ApiPage {
     }
     public void hitApiGetRequest(){
         res = getListUsers(setURL);
-        System.out.println(res.getBody().asString());
-        System.out.println("ini url nya " + setURL);
+        //System.out.println(res.getBody().asString());
     }
     public void hitApiPostRequest(){
         res = postListUsers(setURL);
-        System.out.println(res.getBody().asString());
-        System.out.println("ini url nya " + setURL);
+        //System.out.println(res.getBody().asString());
     }
     public void hitApiGetRequestSpecificID(String userID){
         res = getListUsers(setURL+"/"+userID);
-        System.out.println(res.getBody().asString());
-        System.out.println("ini url nya " + setURL);
+        //System.out.println(res.getBody().asString());
     }
     public void assertResponseCode(int status_Code){
         assertThat(res.statusCode()).isEqualTo(status_Code);
@@ -75,7 +72,6 @@ public class ApiPage {
 
     public void hitApiPutEmailRequest(){
         res = updateUserEmail(global_id);
-        System.out.println(res.getBody().asString());
-        //System.out.println("ini url nya " + setURL);
+        //System.out.println(res.getBody().asString());
     }
 }

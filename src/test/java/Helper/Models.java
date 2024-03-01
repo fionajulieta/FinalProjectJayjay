@@ -42,19 +42,17 @@ public class Models {
     public static Response deleteUser(String endpoint, String user_id){
         setupHeaders();
         String finalEndpoint = Endpoint.GET_USER + "/" + user_id;
-        System.out.println(finalEndpoint);
+        //System.out.println(finalEndpoint);
         return request.when().delete(finalEndpoint);
     }
     public static Response updateUserEmail(String user_id){
-        setupHeaders();
-
         String finalPutEndpoint = Endpoint.GET_USER + "/" + user_id;
+        //System.out.println("final endpointnya adalah " + finalPutEndpoint);
 
-        String valueEmail = "updateUserEmail@dummyapitest.com";
-        bodyObj.put("email", valueEmail);
+        String valueUpdatedEmail = "updateUserEmail@dummyapitest.com";
+        bodyObj.put("email", valueUpdatedEmail);
 
-        System.out.println("final endpointnya adalah " + finalPutEndpoint);
-
+        setupHeaders();
         return request.body(bodyObj.toString()).when().put(finalPutEndpoint);
     }
 }
