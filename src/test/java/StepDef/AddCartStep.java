@@ -15,7 +15,7 @@ public class AddCartStep {
         this.cartPage = new CartPage();
     }
     @When("user click first item in homepage")
-    public void userClickFirstItemInHomepage() {
+    public void userClickFirstItemInHomepage() throws InterruptedException {
         homePage.phoneProduct();
     }
 
@@ -64,7 +64,7 @@ public class AddCartStep {
     }
 
     @And("user go back to homepage")
-    public void userGoBackToHomepage() throws InterruptedException {
+    public void userGoBackToHomepage() {
         homePage.goToHomePageMenu();
     }
 }

@@ -53,32 +53,29 @@ public class HomePage {
     public void userInputExistingEmailToSignUp(String existingEmail){
         driver.findElement(signUpUserEmail).sendKeys(existingEmail);
     }
-
     public void userInputPasswordToLogin(String userPassword){
         driver.findElement(loginUserPassword).sendKeys(userPassword);
     }
     public void userInputPasswordToSignUp(String defaultPassword){
         driver.findElement(signUpUserPassword).sendKeys(defaultPassword);
     }
-    public void userClickLoginButton() throws InterruptedException {
+    public void userClickLoginButton() {
         driver.findElement(loginButtoninPopUp).click();
-        Thread.sleep(5000);
     }
     public void userClickSignUpButton(){
         driver.findElement(signUpButtoninPopUp).click();
     }
-
-    public void usernameIsDisplayedinHomepage(){
+    public void usernameIsDisplayedinHomepage() throws InterruptedException {
+        Thread.sleep(5000);
         assertEquals("Welcome "+"bottle123123@gmail.com",driver.findElement(welcomeUserInHomepage).getText());
     }
     public void homepagePopUpMessage(String homepagePopUpMessage) throws InterruptedException {
         Thread.sleep(5000);
         assertEquals(homepagePopUpMessage,driver.switchTo().alert().getText());
         driver.switchTo().alert().accept();
-        Thread.sleep(2000);
     }
-
-    public void phoneProduct(){
+    public void phoneProduct() throws InterruptedException {
+        Thread.sleep(2000);
         driver.findElement(firstProduct).click();
     }
     public void addItemToCart(){
@@ -86,14 +83,12 @@ public class HomePage {
     }
     public void clickCartMenu() throws InterruptedException {
         driver.findElement(homepageCartMenu).click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
     }
     public void addMonitorItemToCart(){
         driver.findElement(secondProduct).click();
     }
-    public void goToHomePageMenu() throws InterruptedException {
+    public void goToHomePageMenu() {
         driver.findElement(homePageMenu).click();
-        Thread.sleep(5000);
     }
-
 }

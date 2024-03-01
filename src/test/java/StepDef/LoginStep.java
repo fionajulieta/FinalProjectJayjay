@@ -6,8 +6,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import static Helper.Utility.driver;
-
 public class LoginStep {
     HomePage homePage;
 
@@ -41,12 +39,12 @@ public class LoginStep {
     }
 
     @And("user click login button")
-    public void userClickLoginButton() throws InterruptedException {
+    public void userClickLoginButton(){
         homePage.userClickLoginButton();
     }
 
     @Then("user will stayed in homepage with username displayed in menu")
-    public void userWillStayedInHomepageWithUsernameDisplayedInMenu() {
+    public void userWillStayedInHomepageWithUsernameDisplayedInMenu() throws InterruptedException {
         homePage.usernameIsDisplayedinHomepage();
     }
 
