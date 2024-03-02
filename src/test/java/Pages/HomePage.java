@@ -66,7 +66,7 @@ public class HomePage {
         driver.findElement(signUpButtoninPopUp).click();
     }
     public void usernameIsDisplayedinHomepage() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(10000);
         assertEquals("Welcome "+"bottle123123@gmail.com",driver.findElement(welcomeUserInHomepage).getText());
     }
     public void homepagePopUpMessage(String homepagePopUpMessage) throws InterruptedException {
@@ -75,7 +75,7 @@ public class HomePage {
         driver.switchTo().alert().accept();
     }
     public void phoneProduct() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(10000);
         driver.findElement(firstProduct).click();
     }
     public void addItemToCart(){
