@@ -28,7 +28,8 @@ jobs:
     - name: Setup Chrome with extra capabilities
       uses: browser-actions/setup-chrome@v1.4.0
       with:
-        extra_capabilities: '{"goog:chromeOptions": { "args": [ "--disable-dev-shm-usage", "--no-sandbox" ]}}'
+        chrome-version: latest
+        chrome-options: "--no-sandbox"
 
     - name: Build with Gradle
       run: chmod +x gradlew
