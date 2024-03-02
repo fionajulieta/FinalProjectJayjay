@@ -70,7 +70,7 @@ public class HomePage {
         assertEquals("Welcome "+"bottle123123@gmail.com",driver.findElement(welcomeUserInHomepage).getText());
     }
     public void homepagePopUpMessage(String homepagePopUpMessage) throws InterruptedException {
-        Thread.sleep(8000);
+        Thread.sleep(10000);
         assertEquals(homepagePopUpMessage,driver.switchTo().alert().getText());
         driver.switchTo().alert().accept();
     }
