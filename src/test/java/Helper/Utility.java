@@ -14,7 +14,7 @@ public class Utility {
     public static WebDriver driver;
     public static void startDriver() {
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--headless");
+        options.addArguments("--headless");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--remote-allow-origins=*");
@@ -22,7 +22,7 @@ public class Utility {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
-    public static void quitDriver() throws InterruptedException {
+    public static void quitDriver() {
         driver.quit();
     }
     public static String shuffleTitle() {

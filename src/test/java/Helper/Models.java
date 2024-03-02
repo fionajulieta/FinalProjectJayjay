@@ -47,7 +47,7 @@ public class Models {
     }
     public static Response updateUserEmail(String user_id){
         String finalPutEndpoint = Endpoint.GET_USER + "/" + user_id;
-        //System.out.println("final endpointnya adalah " + finalPutEndpoint);
+        System.out.println("final endpointnya adalah " + finalPutEndpoint);
 
         String valueUpdatedEmail = "updateUserEmail@dummyapitest.com";
         bodyObj.put("email", valueUpdatedEmail);

@@ -43,7 +43,7 @@ public class ApiPage {
         assertThat(res.statusCode()).isEqualTo(status_Code);
     }
     public void validateJsonSchema(String jsonSchema){
-        File jsonfile = new File("src/test/java/jsonSchema/"+jsonSchema);
+        File jsonfile = new File("src/test/java/JsonSchema/"+jsonSchema);
         res.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(jsonfile));
     }
 
@@ -72,6 +72,6 @@ public class ApiPage {
 
     public void hitApiPutEmailRequest(){
         res = updateUserEmail(global_id);
-        //System.out.println(res.getBody().asString());
+        System.out.println(res.getBody().asString());
     }
 }
