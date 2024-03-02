@@ -23,6 +23,9 @@ public class ApiPage {
         else if (Objects.equals(url, "POST_USER")) {
             setURL = Endpoint.POST_USER;
         }
+        else if (Objects.equals(url, "GET_TAGS")){
+            setURL = Endpoint.GET_TAGS;
+        }
         else {
             System.out.println("Wrong URL" + url);
         }

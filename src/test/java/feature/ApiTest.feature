@@ -15,6 +15,12 @@ Feature: Test Automation for Dummy Api
     And response body match with json schema "JsonSchemaGetSpecificUser.json"
 
   @api
+  Scenario: test get list of tags
+    Given prepare url for "GET_TAGS"
+    When hit api get request
+    Then response code will be 200
+
+  @api
   Scenario: test post user
     Given prepare url for "POST_USER"
     When hit api post request
