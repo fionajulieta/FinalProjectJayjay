@@ -29,8 +29,7 @@ jobs:
       uses: browser-actions/setup-chrome@v1.4.0
       with:
         chrome-version: latest
-        chrome-options: "--no-sandbox"
-
+        
     - name: Build with Gradle
       run: chmod +x gradlew
       
