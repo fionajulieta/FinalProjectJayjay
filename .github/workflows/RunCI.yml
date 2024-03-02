@@ -25,8 +25,10 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         
-    - name: Setup Chrome
+    - name: Setup Chrome with extra capabilities
       uses: browser-actions/setup-chrome@v1.4.0
+      with:
+        extra_capabilities: '{"goog:chromeOptions": { "args": [ "--disable-dev-shm-usage", "--no-sandbox" ]}}'
 
     - name: Build with Gradle
       run: chmod +x gradlew
