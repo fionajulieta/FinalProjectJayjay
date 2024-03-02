@@ -22,7 +22,7 @@ public class HomePage {
     By loginButtoninPopUp = By.cssSelector("#logInModal > div > div > div.modal-footer > button.btn.btn-primary");
     By signUpButtoninPopUp = By.cssSelector("#signInModal > div > div > div.modal-footer > button.btn.btn-primary");
     By welcomeUserInHomepage = By.id("nameofuser");
-    By firstProduct = By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/div/h4/a");
+    By firstProduct = By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/div/h4");
     By itemAddToCartButton = By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/a");
     By homepageCartMenu = By.id("cartur");
     By secondProduct = By.xpath("//*[@id=\"tbodyid\"]/div[9]/div/div/h4/a");
