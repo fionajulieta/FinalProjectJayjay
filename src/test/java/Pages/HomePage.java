@@ -75,7 +75,7 @@ public class HomePage {
         driver.switchTo().alert().accept();
     }
     public void phoneProduct() throws InterruptedException {
-        Thread.sleep(10000);
+        Thread.sleep(15000);
         driver.findElement(firstProduct).click();
     }
     public void addItemToCart(){
