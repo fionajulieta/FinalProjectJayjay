@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class HomePage {
     static Faker faker = new Faker();
     String randomName = faker.name().firstName();
-    String randomEmail = randomName + "@fionafinalproject.jayjay";
+    String randomEmail = randomName + "@fionafinalprojects.jayjay";
 
     By loginMenu = By.id("login2");
     By signUpMenu = By.id("signin2");

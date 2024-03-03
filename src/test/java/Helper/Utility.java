@@ -38,7 +38,7 @@ public class Utility {
         String allowedChars = "abcdefghijklmnopqrstuvwxyz" + "1234567890";
         String pictureLink = "";
         String temp = RandomStringUtils.randomAlphanumeric(10);
-        pictureLink = "https://" + temp + ".jpg";
+        pictureLink = "https://" + temp + ".jpeg";
         return pictureLink;
     }
 

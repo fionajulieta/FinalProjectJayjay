@@ -26,7 +26,7 @@ public class Models {
 
         String valueFirstName = faker.name().firstName();
         String valueLastName = faker.name().lastName();
-        String valueEmail = valueFirstName + "." + valueLastName + "@dummyapitest.com";
+        String valueEmail = valueFirstName + "." + valueLastName + "@dummyapitests.com";
         String valueTitle = Utility.shuffleTitle();
         String valuePicture = Utility.generateRandomPictureLink();
         bodyObj.put("firstName", valueFirstName);
@@ -51,7 +51,7 @@ public class Models {
 
         bodyObj = new JSONObject();
 
-        String valueUpdatedEmail = "updateUserEmail@dummyapitest.com";
+        String valueUpdatedEmail = "updateUserEmail@dummyapitests.com";
         bodyObj.put("email", valueUpdatedEmail);
 
         setupHeaders();
