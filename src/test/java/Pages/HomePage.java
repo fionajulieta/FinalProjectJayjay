@@ -22,7 +22,7 @@ public class HomePage {
     By loginButtoninPopUp = By.xpath("//button[text()='Log in']");
     By signUpButtoninPopUp = By.xpath("//button[text()='Sign up']");
     By welcomeUserInHomepage = By.id("nameofuser");
-    By firstProduct = By.xpath("//a[text()='Nokia lumia 1520']");
+    By firstProduct = By.xpath("//*[@class='card h-100'][contains(.,'Nokia lumia 1520')]");
     By itemAddToCartButton = By.xpath("//a[@class='btn btn-success btn-lg']");
     By homepageCartMenu = By.id("cartur");
     By secondProduct = By.xpath("(//a[normalize-space()='Sony vaio i7'])[1]");
