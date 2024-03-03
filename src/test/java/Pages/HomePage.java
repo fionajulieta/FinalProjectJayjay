@@ -19,14 +19,14 @@ public class HomePage {
     By signUpUserEmail = By.id("sign-username");
     By loginUserPassword = By.id("loginpassword");
     By signUpUserPassword = By.id("sign-password");
-    By loginButtoninPopUp = By.cssSelector("#logInModal > div > div > div.modal-footer > button.btn.btn-primary");
-    By signUpButtoninPopUp = By.cssSelector("#signInModal > div > div > div.modal-footer > button.btn.btn-primary");
+    By loginButtoninPopUp = By.xpath("//button[text()='Log in']");
+    By signUpButtoninPopUp = By.xpath("//button[text()='Sign up']");
     By welcomeUserInHomepage = By.id("nameofuser");
-    By firstProduct = By.xpath("//*[@id=\"tbodyid\"]/div[2]/div");
-    By itemAddToCartButton = By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/a");
+    By firstProduct = By.xpath("//a[text()='Nokia lumia 1520']");
+    By itemAddToCartButton = By.xpath("//a[@class='btn btn-success btn-lg']");
     By homepageCartMenu = By.id("cartur");
-    By secondProduct = By.xpath("//*[@id=\"tbodyid\"]/div[9]/div/div/h4/a");
-    By homePageMenu = By.xpath("//*[@id=\"navbarExample\"]/ul/li[1]/a");
+    By secondProduct = By.xpath("(//a[normalize-space()='Sony vaio i7'])[1]");
+    By homePageMenu = By.xpath("//a[text()='Home ']");
 
 
     public void userGoToHomePage(){

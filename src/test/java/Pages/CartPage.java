@@ -12,7 +12,7 @@ public class CartPage {
 
     By cartTableList = By.id("tbodyid");
     By deleteButtonLastAddedItem = By.xpath("//*[@id='tbodyid']/tr[@class='success' and td[2]/text()='Nokia lumia 1520']/td[4]/a");
-    By placeOrderButton = By.xpath("//*[@id=\"page-wrapper\"]/div/div[2]/button");
+    By placeOrderButton = By.xpath("//button[@class='btn btn-success']");
     By placeOrderPopUp = By.id("orderModalLabel");
     By orderNameField = By.id("name");
     By orderCountryField = By.id("country");
@@ -20,8 +20,8 @@ public class CartPage {
     By orderCreditCardField = By.id("card");
     By orderMonthField = By.id("month");
     By orderYearField = By.id("year");
-    By purchaseButtonInPlaceOrderPopUp = By.xpath("//*[@id=\"orderModal\"]/div/div/div[3]/button[2]");
-    By thankYouPopUp = By.xpath("/html/body/div[10]");
+    By purchaseButtonInPlaceOrderPopUp = By.xpath("//button[text()='Purchase']");
+    By thankYouPopUp = By.xpath("//h2[text()='Thank you for your purchase!']");
     By priceColumnInCart = By.xpath("//tbody[@id='tbodyid']/tr");
     By totalPriceDisplayed = By.id("totalp");
 
