@@ -17,3 +17,7 @@ Detail:
 8.Buatlah report menggunakan Cucumber untuk format HTML dan JSON
 9.Buatlah GitHub Actions workflow untuk menjalankan test yang sudah dibuat dengan cara (event) manual trigger dan setiap kali ada   Pull Request
 10.Jangan lupa tambahkan README file dan berikian setiap informasi penting dari repository kalian, seperti tools dan library yang digunakan, dan bagaimana cara menjalankan test nya
+
+
+Hasil Run:
+![image](https://github.com/fionajulieta/FinalProjectJayjay/assets/146444371/b5fe2e56-194d-4f4b-aed0-9f8330fee9c0)
