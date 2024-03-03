@@ -22,7 +22,7 @@ public class HomePage {
     By loginButtoninPopUp = By.xpath("//button[text()='Log in']");
     By signUpButtoninPopUp = By.xpath("//button[text()='Sign up']");
     By welcomeUserInHomepage = By.id("nameofuser");
-    By firstProduct = By.xpath("//*[@class='card h-100'][contains(.,'Nokia lumia 1520')]");
+    By firstProduct = By.xpath("//*[text()='Nokia lumia 1520']");
     By itemAddToCartButton = By.xpath("//a[@class='btn btn-success btn-lg']");
     By homepageCartMenu = By.id("cartur");
     By secondProduct = By.xpath("(//a[normalize-space()='Sony vaio i7'])[1]");
@@ -66,11 +66,11 @@ public class HomePage {
         driver.findElement(signUpButtoninPopUp).click();
     }
     public void usernameIsDisplayedinHomepage() throws InterruptedException {
-        Thread.sleep(10000);
+        Thread.sleep(15000);
         assertEquals("Welcome "+"bottle123123@gmail.com",driver.findElement(welcomeUserInHomepage).getText());
     }
     public void homepagePopUpMessage(String homepagePopUpMessage) throws InterruptedException {
-        Thread.sleep(10000);
+        Thread.sleep(15000);
         assertEquals(homepagePopUpMessage,driver.switchTo().alert().getText());
         driver.switchTo().alert().accept();
     }
